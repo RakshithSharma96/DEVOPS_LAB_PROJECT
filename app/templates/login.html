@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome back</h1>
+<p>Sign in to the demonstration application.</p>
+<!-- Flask validates inputs so browser-specific messages never affect the tests. -->
+<form method="post" action="{{ url_for('login') }}" novalidate>
+  <label for="email">Email</label>
+  <input id="email" name="email" type="email" autocomplete="username" required
+         value="{{ values.get('email', '') }}">
+  <label for="password">Password</label>
+  <div class="password-field">
+    <input id="password" name="password" type="password" autocomplete="current-password" required>
+    <button id="toggle-password" class="toggle" type="button" aria-controls="password" aria-pressed="false">Show password</button>
+  </div>
+  <label class="checkbox" for="remember-me">
+    <input id="remember-me" name="remember_me" type="checkbox" {% if values.get('remember_me') == 'on' %}checked{% endif %}>
+    Remember me
+  </label>
+  <p class="hint">Demo option only; no persistent login is created.</p>
+  <button id="login-button" type="submit">Log in</button>
+</form>
+<nav aria-label="Account links">
+  <a id="forgot-password" href="{{ url_for('forgot_password') }}">Forgot password?</a>
+  <a id="register-link" href="{{ url_for('register') }}">Create an account</a>
+</nav>
+<p class="hint">Demo credentials: <strong>admin@example.com</strong> / <strong>admin123</strong></p>
+<script src="{{ url_for('static', filename='login.js') }}" defer></script>
+{% endblock %}

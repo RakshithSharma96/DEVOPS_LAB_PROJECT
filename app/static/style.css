@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 40px 20px; background: #eef2f6; color: #203044; font: 16px/1.5 Arial, sans-serif; }
+main { max-width: 500px; margin: 20px auto; padding: 32px; background: white; border: 1px solid #dce3eb; border-radius: 12px; }
+h1 { margin: 8px 0; font-size: 28px; }
+.eyebrow { color: #2463a6; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+label { display: block; margin-top: 16px; font-weight: bold; }
+input { width: 100%; margin-top: 6px; padding: 11px; border: 1px solid #98a7b8; border-radius: 5px; font: inherit; }
+button { width: 100%; margin-top: 24px; padding: 12px; color: white; background: #245fa4; border: 0; border-radius: 5px; font: inherit; cursor: pointer; }
+button:hover { background: #19477d; }
+input:focus-visible, button:focus-visible { outline: 3px solid #82b6ee; outline-offset: 2px; }
+.message { padding: 12px; border-radius: 5px; }
+.success { color: #14532d; background: #dcfce7; }
+.error { color: #8a1825; background: #fee2e2; }
+.hint { margin-bottom: 0; font-size: 13px; color: #526174; }
+.password-field { display: flex; align-items: stretch; gap: 8px; }
+.password-field input { min-width: 0; flex: 1; }
+.toggle { width: auto; margin-top: 6px; padding: 8px; font-size: 13px; }
+.checkbox { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; }
+.checkbox input { width: 18px; height: 18px; flex-shrink: 0; margin: 2px 0 0; }
+nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; margin-top: 18px; font-size: 14px; }
+a { color: #245fa4; }
